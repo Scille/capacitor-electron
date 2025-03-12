@@ -8,6 +8,7 @@
     "lint": "pnpm eslint . --ext ts && pnpm prettier \"./**/*.{css,html,ts,js,java}\" --check",
     "fmt": "pnpm eslint . --ext ts --fix && pnpm prettier \"./**/*.{css,html,ts,js,java}\" --write",
     "clean": "rimraf ./dist && rimraf ./template.tar.gz",
+    "prepare": "npm run build",
     "build": "pnpm run clean && pnpm run fmt && pnpm run build-platform && pnpm run build-platform-types",
     "capacitor:add": "node dist/cli-scripts/cap-scripts.js add",
     "capacitor:copy": "node dist/cli-scripts/cap-scripts.js copy",
